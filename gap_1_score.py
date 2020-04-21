@@ -9,6 +9,9 @@ def get_gap_1_score(gaps, fps=30):
 
     GAP_1_SCORE requires only a list of all the gaps
     """
+    if len(gaps) == 0:
+        return 0
+
     g = np.array(gaps)
     g1 = g[g <= 200]
     g2 = g[g > 200] 
